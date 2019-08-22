@@ -1,0 +1,10 @@
+{
+  "name": "JavaScript_ES6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/preset-env": "^7.5.5"
+  }
+}
