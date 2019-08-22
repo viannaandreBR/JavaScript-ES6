@@ -1,7 +1,11 @@
 "use strict";
 
-function soma(a, b) {
-  return a + b;
-}
-
-console.log(soma(3, 4));
+var usuario = {
+  nome: 'Andre',
+  idade: 46,
+  endereco: {
+    cidade: 'Rio de Janeiro',
+    estado: 'RJ'
+  }
+};
+console.log(usuario);
