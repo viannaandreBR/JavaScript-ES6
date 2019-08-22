@@ -7,4 +7,9 @@ const usuario = {
 },
 };
 
+const nome = usuario.nome;
+const idade = usuario.idade;
+
 console.log(usuario);
+
+console.log(nome,idade);

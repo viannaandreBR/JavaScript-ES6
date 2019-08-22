@@ -8,4 +8,7 @@ var usuario = {
     estado: 'RJ'
   }
 };
+var nome = usuario.nome;
+var idade = usuario.idade;
 console.log(usuario);
+console.log(nome, idade);
