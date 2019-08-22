@@ -1,2 +1,1 @@
-cls
-powershell
+"C:\Program Files\Git\bin\bash"
