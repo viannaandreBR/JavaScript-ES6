@@ -1,7 +1,5 @@
-const arr = [1, 3, 4, 5, 6];
+function soma(a,b) {
+    return a + b;
+}
 
-const newArr = arr.map((item) => {
-    return item*2;
-})
-
-console.log(newArr);
+console.log(soma(3,4));
