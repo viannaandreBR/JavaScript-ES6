@@ -44,10 +44,21 @@ function (_List) {
   _inherits(TodoList, _List);
 
   function TodoList() {
+    var _this;
+
     _classCallCheck(this, TodoList);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(TodoList).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(TodoList).call(this));
+    _this.usuario = 'Andre';
+    return _this;
   }
+
+  _createClass(TodoList, [{
+    key: "mostraUsuario",
+    value: function mostraUsuario() {
+      console.log(this.usuario);
+    }
+  }]);
 
   return TodoList;
 }(List);
@@ -57,3 +68,5 @@ var MinhaLista = new TodoList();
 document.getElementById('novotodo').onclick = function () {
   MinhaLista.add('Novo Todo');
 };
+
+MinhaLista.mostraUsuario();
