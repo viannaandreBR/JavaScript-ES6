@@ -7,8 +7,12 @@ var usuario = {
     cidade: 'Rio de Janeiro',
     estado: 'RJ'
   }
-};
-var nome = usuario.nome;
-var idade = usuario.idade;
-console.log(usuario);
-console.log(nome, idade);
+}; //const nome = usuario.nome;
+//const idade = usuario.idade;
+
+var nome = usuario.nome,
+    idade = usuario.idade,
+    estado = usuario.endereco.estado; //console.log(usuario);
+//console.log(nome,idade);
+
+console.log("Desestruturação usuário", nome, estado, idade);

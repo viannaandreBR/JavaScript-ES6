@@ -7,9 +7,13 @@ const usuario = {
 },
 };
 
-const nome = usuario.nome;
-const idade = usuario.idade;
+//const nome = usuario.nome;
+//const idade = usuario.idade;
 
-console.log(usuario);
+const { nome, idade, endereco: {estado} } = usuario;
 
-console.log(nome,idade);
+//console.log(usuario);
+
+//console.log(nome,idade);
+
+console.log("Desestruturação usuário", nome, estado, idade);
