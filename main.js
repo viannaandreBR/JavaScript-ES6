@@ -1,12 +1,13 @@
-const arr1 = [1,2,3,4];
-const arr2 = [5,6,7,8];
+// Spread of Object
 
-const arr3 = [...arr1, ...arr2];
+const usuario1 = {
+    nome: 'Andre',
+    idade: '45',
+    empresa: 'BioInformatica Labs'
+}
 
-console.log("Array 1 =>",arr1);
+const usuario2 = { ...usuario1, nome: 'Durval', idade:81}
 
-console.log("Array 2 =>",arr2);
+console.log(usuario1);
 
-console.log("Array 3 =>",arr3);
-
-console.log("Array S =>",sarr);
+console.log(usuario2);
