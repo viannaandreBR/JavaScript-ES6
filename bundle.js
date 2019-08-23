@@ -1,18 +1,19 @@
 "use strict";
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 var usuario = {
   nome: 'Andre',
   idade: 46,
-  endereco: {
-    cidade: 'Rio de Janeiro',
-    estado: 'RJ'
-  }
-}; //const nome = usuario.nome;
-//const idade = usuario.idade;
+  empresa: 'BioinformaitcaLabs'
+};
 
 var nome = usuario.nome,
-    idade = usuario.idade,
-    estado = usuario.endereco.estado; //console.log(usuario);
-//console.log(nome,idade);
+    resto = _objectWithoutProperties(usuario, ["nome"]);
 
-console.log("Desestruturação usuário", nome, estado, idade);
+console.log(nome);
+console.log(resto);
+console.log("Nome ====================>", nome);
+console.log("Informações Restante ====>", resto);

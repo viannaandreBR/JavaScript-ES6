@@ -1,19 +1,15 @@
 const usuario = {
     nome: 'Andre',
     idade: 46,
-    endereco: {
-    cidade: 'Rio de Janeiro',
-    estado: 'RJ',
-},
+    empresa: 'BioinformaitcaLabs'
 };
 
-//const nome = usuario.nome;
-//const idade = usuario.idade;
+const { nome, ...resto } = usuario;
 
-const { nome, idade, endereco: {estado} } = usuario;
+console.log(nome);
 
-//console.log(usuario);
+console.log(resto);
 
-//console.log(nome,idade);
+console.log("Nome ====================>", nome);
 
-console.log("Desestruturação usuário", nome, estado, idade);
+console.log("Informações Restante ====>", resto);
