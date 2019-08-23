@@ -1,7 +1,3 @@
-// Template Literals
-const nome = 'Andre';
-const idade = 45;
+import { soma } from './funcoes';
 
-//console.log("Meu nome é "+ nome + ", e tenho " + idade + " anos.");
-
-console.log(`Meu nome é ${nome}, e tenho ${idade} anos`);
+console.log(soma(3,4));
