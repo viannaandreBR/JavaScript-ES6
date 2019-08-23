@@ -1,7 +1,5 @@
-const arr = [1,2,3,4];
+function soma(...params){
+    return params.reduce((total,next) => total + next);
+}
 
-const [ a, b, ...c] = arr;
-
-console.log(a);
-console.log(b);
-console.log(c);
+console.log(soma(1,3,4));
