@@ -1,12 +1,14 @@
-document.write("Rotina JavaScrit: Criação Linhas em branco <br><br><br>");
-var i;
-for(i=10; i>=0; i= i-1){
-   var s;
-   for(s=0; s<i; s = s+1){
-    document.write("*");
-   }
-   //i want this to print a new line
-   document.write("\n\n\n");
-   document.write("<br>");
+document.write('Update: Async/Await 1 (antes) <br><br><br>');
+// Nova forma de trabalhar com programação assíncrona no JavaScript
+// Promises forma de realizar ações de forma assíncrona com 10 segundos
 
-}
+const minhaPromise = () => new Promise((resolve,reject) => {
+    setTimeout(() => { resolve('OK') } , 10000);  
+});
+
+minhaPromise().then(response => {
+  document.write('Update: Async/Await 1 (depois) <br><br><br>');
+  document.write('Resultado da Consulta a Promise =>>>');
+  document.write(response);
+})
+
