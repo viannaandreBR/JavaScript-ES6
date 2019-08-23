@@ -15,8 +15,8 @@
   },
   "scripts": {
     "dev": "babel ./main.js -o ./bundle.js -w",
-    "dev1": "webpack --mode=developement -w",
-    "dev2": "webpack-dev-server --mode=developement",
-    "build": "webpack --mode=production"
+    "dev1": "webpack --node=developement -w",
+    "dev2": "webpack-dev-server --node=developement",
+    "build": "webpack --node=production"
   }
 }
