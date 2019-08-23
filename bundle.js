@@ -1,13 +1,9 @@
 "use strict";
 
-function soma() {
-  for (var _len = arguments.length, params = new Array(_len), _key = 0; _key < _len; _key++) {
-    params[_key] = arguments[_key];
-  }
-
-  return params.reduce(function (total, next) {
-    return total + next;
-  });
-}
-
-console.log(soma(1, 3, 4));
+var arr1 = [1, 2, 3, 4];
+var arr2 = [5, 6, 7, 8];
+var arr3 = [].concat(arr1, arr2);
+console.log("Array 1 =>", arr1);
+console.log("Array 2 =>", arr2);
+console.log("Array 3 =>", arr3);
+console.log("Array S =>", sarr);
