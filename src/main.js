@@ -1,18 +1,21 @@
-document.write('Update: Async/Await 1 (antes) <br><br><br>');
+document.write('Update: Async/Await 2 (antes) <br><br><br>');
 // Nova forma de trabalhar com programação assíncrona no JavaScript
 // Promises forma de realizar ações de forma assíncrona com 10 segundos
+// Asyc / Await função do ES8
+// Necessita Biblioteca Adicional do babel
+// yarn add @babel/plugin-transform-async-to-generator
+//
 
 const minhaPromise = () => new Promise((resolve,reject) => {
-    setTimeout(() => { resolve('OK') } , 10000);  
+    setTimeout(() => { resolve('OK') } , 2000);  
 });
 
-minhaPromise()
-    .then(response => {
-        document.write('Update: Async/Await 1 (depois) <br><br><br>');
-        document.write('Resultado da Consulta a Promise =>>>');
-        document.write(response);
-    })
-    .catch(err => {
+async function executaPromise() {
+   const response = await minhaPromise();
+   
+    console.log(response);
+    document.write('Update: Async/Await 2 (depois) <br><br><br>');
+    document.write(response);
+}
 
-    });
-
+executaPromise();
