@@ -8,13 +8,15 @@
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7",
-    "babel-loader": "^8.0.6"    
+    "webpack-dev-server": "^3.8.0"
   },
   "scripts": {
     "dev": "babel ./main.js -o ./bundle.js -w",
-    "dev1": "webpack --node=developement -w"
+    "dev1": "webpack --mode=developement -w",
+    "dev2": "webpack-dev-server --mode=developement",
+    "build": "webpack --mode=production"
   }
-  
 }
