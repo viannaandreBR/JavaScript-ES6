@@ -1,13 +1,7 @@
-// Spread of Object
+// Template Literals
+const nome = 'Andre';
+const idade = 45;
 
-const usuario1 = {
-    nome: 'Andre',
-    idade: '45',
-    empresa: 'BioInformatica Labs'
-}
+//console.log("Meu nome é "+ nome + ", e tenho " + idade + " anos.");
 
-const usuario2 = { ...usuario1, nome: 'Durval', idade:81}
-
-console.log(usuario1);
-
-console.log(usuario2);
+console.log(`Meu nome é ${nome}, e tenho ${idade} anos`);
