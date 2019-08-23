@@ -20,5 +20,8 @@
     "dev1": "webpack --node=developement -w",
     "dev2": "webpack-dev-server --node=developement",
     "build": "webpack --node=production"
+  },
+  "dependencies": {
+    "axios": "^0.19.0"
   }
 }
