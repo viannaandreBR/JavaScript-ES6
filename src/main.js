@@ -1,14 +1,16 @@
 // App Demo Echama Script ES6, ES7, ES8
 //
 //
-
 //document.write('App consulta API GitHub');
+
+import api from './api';
 
 class App {
     constructor(){
         this.repositories = [];
 
         this.formEl = document.getElementById('repo-form');
+        this.inputEl = document.querySelector('input[name=repository]');
         this.listEl = document.getElementById('repo-list');
 
         this.registerHandlers();
@@ -21,8 +23,22 @@ class App {
 
     };
 
-    addRepository(event) {
+    async addRepository(event) {
         event.preventDefault();
+
+
+        const repoInput = this.inputEl.value;
+
+        console.log(repoInput);
+
+        if (repoInput.length === 0 ) 
+            return; 
+
+        
+        const response = await api.get(`/repos/${repoInput}`);
+
+        
+        console.log(response);
 
         this.repositories.push({
             name: 'rocketseat.com.br',
