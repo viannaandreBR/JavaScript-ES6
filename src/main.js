@@ -29,7 +29,6 @@ class App {
 
         const repoInput = this.inputEl.value;
 
-        console.log(repoInput);
 
         if (repoInput.length === 0 ) 
             return; 
@@ -37,15 +36,18 @@ class App {
         
         const response = await api.get(`/repos/${repoInput}`);
 
-        
-        console.log(response);
+
+        const { name, description, html_url, owner:{avatar_url}} = response.data;
+
 
         this.repositories.push({
-            name: 'rocketseat.com.br',
-            description:'Tire a sua idéia do papel e dê vida à sua startup',
-            avatar_url: 'https://avatars0.githubusercontent.com/u/28929274?v=4',
-            html_url: 'http://github.com/rocketseat.com.brrocketseat.com.br',
+            name,
+            description,
+            avatar_url,
+            html_url,
         });
+
+        this.inputEl.value = '';
 
         this.render();
     };
@@ -65,6 +67,7 @@ class App {
 
             let linkEl = document.createElement('a');
             linkEl.setAttribute('target','_blank');
+            linkEl.setAttribute('href',repo.html_url);
             linkEl.appendChild(document.createTextNode('Acessar'));
 
             let listItemEl = document.createElement('li');
