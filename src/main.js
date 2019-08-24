@@ -1,4 +1,4 @@
-document.write('API - Using Axios and Async / Await<br><br><br>');
+//document.write('API - Using Axios and Async / Await<br><br><br>');
 console.log('Método Try/Catch(errr)');
 //
 //
@@ -6,7 +6,6 @@ console.log('Método Try/Catch(errr)');
 //
 //
 import axios from 'axios';
-
 
 class Api {
     static async getUserInfo(username){
@@ -23,3 +22,7 @@ class Api {
 }
 
 Api.getUserInfo('viannaandreBR233');
+
+Api.getUserInfo('viannaandreBR');
+
+Api.getUserInfo('diego3g');
