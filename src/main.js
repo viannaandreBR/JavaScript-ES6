@@ -1,21 +1,19 @@
-document.write('Update: Async/Await 2 (antes) <br><br><br>');
-// Nova forma de trabalhar com programação assíncrona no JavaScript
-// Promises forma de realizar ações de forma assíncrona com 10 segundos
-// Asyc / Await função do ES8
-// Necessita Biblioteca Adicional do babel
-// yarn add @babel/plugin-transform-async-to-generator
+document.write('API - Using Axios and Async / Await<br><br><br>');
 //
+//
+// Crição de API utilizando o Axios e Async/Await
+//
+//
+import axios from 'axios';
 
-const minhaPromise = () => new Promise((resolve,reject) => {
-    setTimeout(() => { resolve('OK') } , 2000);  
-});
+class Api {
+    static async getUserInfo(username){
+        const response = await axios.get(`https://api.github.com/users/${username}`);
+    
+        console.log(response);
 
-async function executaPromise() {
-   const response = await minhaPromise();
-   
-    console.log(response);
-    document.write('Update: Async/Await 2 (depois) <br><br><br>');
-    document.write(response);
+//document.write(response);
+    }
 }
 
-executaPromise();
+Api.getUserInfo('viannaandreBR');
