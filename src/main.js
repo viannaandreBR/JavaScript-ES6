@@ -1,28 +1,43 @@
-//document.write('API - Using Axios and Async / Await<br><br><br>');
-console.log('Método Try/Catch(errr)');
+// App Demo Echama Script ES6, ES7, ES8
 //
 //
-// Crição de API utilizando o Axios e Async/Await
-//
-//
-import axios from 'axios';
 
-class Api {
-    static async getUserInfo(username){
-        try {
-        const response = await axios.get(`https://api.github.com/users/${username}`);
-        console.log(response);
-        } catch (err) {
-        console.warn('Erro na API');
-        }
+//document.write('App consulta API GitHub');
+
+console.log('App consulta API GitHub');
+
+class App {
+    constructor(){
+        this.repositories = [];
+
+        this.formEl = document.getElementById('repo-form');
+
+
+        this.registerHandlers();
+
 
     }
 
+    registerHandlers() {
+        this.formEl.onsubmit = event => this.addRepository(event);
 
+    }
+
+    addRepository() {
+        event.preventDefault();
+
+        this.repositories.push({
+            name: 'rocketseat.com.br',
+            despription: 'Tire a sua idéia do papel e dê vida à sua startup',
+            avatar_url: 'https://avatars0.githubusercontent.com/u/28929274?v=4',
+            html_url: 'http://github.com/rocketseat.com.brrocketseat.com.br'
+        });
+
+        console.log(this.repositories);
+        
+    }
 }
 
-Api.getUserInfo('viannaandreBR233');
+//const MeuApp = new App();
 
-Api.getUserInfo('viannaandreBR');
-
-Api.getUserInfo('diego3g');
+new App();
