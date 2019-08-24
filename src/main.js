@@ -33,7 +33,7 @@ class App {
         if (repoInput.length === 0 ) 
             return; 
 
-        
+        try {
         const response = await api.get(`/repos/${repoInput}`);
 
 
@@ -46,10 +46,18 @@ class App {
             avatar_url,
             html_url,
         });
-
+        
         this.inputEl.value = '';
 
         this.render();
+
+    } catch(err){
+        alert('O repositorio não existe');
+
+    }
+
+
+
     };
 
     render() {
